@@ -113,7 +113,7 @@ exports.getAllReviews = async(req,res) => {
         const reviews = await Review.find({})
 
         return res.status(200).json({
-            success : false,
+            success : true,
             message : "ALL REVIEWS FETCHED",
             data : reviews
         })

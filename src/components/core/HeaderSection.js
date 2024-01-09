@@ -63,11 +63,11 @@ function HeaderSection() {
                     }
             </div>
             <div className=' h-full w-[70%] rounded-sm border-richorange border-2 relative mr-12'>
-                <div className='h-full absolute -top-4 -left-4 w-full'>
+                <div className='h-full absolute -top-4 -left-4 w-full group duration-200 transition-all'>
                     <video muted className=' z-50 h-full object-cover' ref={videoRef} onClick={() => handleVideoToggle()} autoPlay loop>
                         <source src={`https://res.cloudinary.com/dp8l8uxgr/video/upload/v1704738595/igTechSo/Big_Buck_tw0m9r.mp4`} type='video/mp4'/>
                     </video>
-                    <div className=' bg-white bg-opacity-50 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] p-4 rounded-full' onClick={() => handleVideoToggle()}>
+                    <div className=' invisible bg-white bg-opacity-50 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] p-4 rounded-full transition-all duration-200  group-hover:visible' onClick={() => handleVideoToggle()}>
                       {
                         !isPlaying ? <FaPlay className=' text-white text-3xl'/> : <FaPause className=' text-white text-3xl'/>
                       }
