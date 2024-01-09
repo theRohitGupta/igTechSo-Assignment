@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# ASSIGNMENT igTechSo BY ROHIT GUPTA
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project Name
+LandGuru
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+This MERN Stack project is a dynamic and interactive web application featuring sliders, video playback, and a review section with backend support. Utilizing modern technologies, it seamlessly integrates user-friendly interfaces with a robust backend powered by MongoDB and token-based authentication.
 
-### `npm start`
+## Features
+## Front-end Machine Test
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Slider:**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **Arrow Navigation and Box Hover:**
 
-### `npm test`
+3. **Video Playback:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. **Slider (Second Section):**
 
-### `npm run build`
+5. **Accordion:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Back-end Machine Test
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **API Endpoints:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **CREATE, UPDATE, DELETE, READ Endpoints:**
 
-### `npm run eject`
+3. **Authentication:**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. **Database:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. **React Integration:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+6. **Postman Collection:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Tech Stack
 
-## Learn More
+- **Frontend Framework:** MERN STACK
+- **Authentication:** MONGODB and JWT authentication
+- **Hosting:** [Vercel](https://ig-tech-so-assignment.vercel.app)
+- ** POSTMAN:** [POSTMAN](https://www.postman.com/therohitgupta/workspace/igtechso/collection/22682116-ccee1cd5-5c62-46b1-8a39-fb9bfb38d66c?action=share&creator=22682116)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Setup
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clone the repository: `git clone https://github.com/theRohitGupta/igTechSo-Assignment.git`
+2. Install dependencies: `npm install`
+3. Configure MongoDb: Follow the [MongoDb setup guide](https://www.mongodb.com/developer/) and update your MongoDB configuration in the project.
+4. Visit [http://localhost:3000](http://localhost:3000) to view the app in your browser.
 
-### Code Splitting
+## Running the Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## bash
+npm run dev
 
-### Analyzing the Bundle Size
+## Demo
+**Deployed on:**
+- [Vercel](https://ig-tech-so-assignment.vercel.app)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contact Information
 
-### Making a Progressive Web App
+For inquiries and submissions, please email:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Name:** Rohit Gupta
+- **Domain:** MERN STACK
+- **Number:** 7049761589
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
