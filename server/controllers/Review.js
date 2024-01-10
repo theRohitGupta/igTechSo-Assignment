@@ -29,28 +29,28 @@ exports.createReview = async(req, res) => {
         }
 
         if(!reviewTitle || !rating || !studentsWatched){
-            return res.status(404).json({
+            return res.status(406).json({
                 success : false,
                 message : "ALL FIELDS ARE REQUIRED"
             })
         }
 
         if(isNaN(studentsWatched) || isNaN(rating)){
-            return res.status(404).json({
+            return res.status(406).json({
                 success : false,
                 message : "STUDENTS WATCHED / RATING MUST BE A NUMBER"
             })
         }
 
         if(rating < 1 || rating > 5 ){
-            return res.status(404).json({
+            return res.status(406).json({
                 success : false,
                 message : "RATING MUST BE 1, 2, 3, 4, 5"
             })
         }
 
         if(studentsWatched < 0 ){
-            return res.status(404).json({
+            return res.status(406).json({
                 success : false,
                 message : "STUDENTS WATCHED CANT BE A NEGATIVE NUMBER"
             })
@@ -65,7 +65,7 @@ exports.createReview = async(req, res) => {
         }
 
         if(image.length > 1){
-            return res.status(400).json({
+            return res.status(406).json({
                 success : false,
                 message : "ONLY ONE REVIEW IMAGE CAN BE UPLOADED"
             })
@@ -73,7 +73,7 @@ exports.createReview = async(req, res) => {
 
         const allowedFileTypes = ['png', 'jpeg', 'jpg']
         if(!allowedFileTypes.includes(image.name.split(".").slice(-1)[0])){
-            return res.status(400).json({
+            return res.status(406).json({
                 success : false,
                 message : "REVIEW IMAGE MUST BE ['png', 'jpeg', 'jpg']"
             })
@@ -134,7 +134,7 @@ exports.updateReview = async(req,res) => {
         const { reviewId, reviewTitle="", rating, studentsWatched } = req.body
         
         if(!reviewId){
-            return res.status(400).json({
+            return res.status(406).json({
                 success : false,
                 message : "REVIEW ID IS REQUIRED TO UPDATE ANY REVIEW",
             })
@@ -152,14 +152,14 @@ exports.updateReview = async(req,res) => {
 
         if(studentsWatched){
             if(isNaN(studentsWatched)){
-                return res.status(404).json({
+                return res.status(406).json({
                     success : false,
                     message : "STUDENTS WATCHED MUST BE A NUMBER"
                 })
             }
 
             if(studentsWatched < 0 ){
-                return res.status(404).json({
+                return res.status(406).json({
                     success : false,
                     message : "STUDENTS WATCHED CANT BE A NEGATIVE NUMBER"
                 })
@@ -167,14 +167,14 @@ exports.updateReview = async(req,res) => {
         }
         if(rating){
             if(isNaN(rating)){
-                return res.status(404).json({
+                return res.status(406).json({
                     success : false,
                     message : "RATING MUST BE A NUMBER"
                 })
             }
             
             if(rating < 1 || rating > 5 ){
-                return res.status(404).json({
+                return res.status(406).json({
                     success : false,
                     message : "RATING MUST BE 1, 2, 3, 4, 5"
                 })
@@ -187,7 +187,7 @@ exports.updateReview = async(req,res) => {
             image = req.files.reviewImage
 
             if(image.length > 1){
-                return res.status(400).json({
+                return res.status(406).json({
                     success : false,
                     message : "ONLY ONE REVIEW IMAGE CAN BE UPLOADED"
                 })
@@ -195,7 +195,7 @@ exports.updateReview = async(req,res) => {
     
             const allowedFileTypes = ['png', 'jpeg', 'jpg']
             if(!allowedFileTypes.includes(image.name.split(".").slice(-1)[0])){
-                return res.status(400).json({
+                return res.status(406).json({
                     success : false,
                     message : "REVIEW IMAGE MUST BE ['png', 'jpeg', 'jpg']"
                 })
@@ -211,7 +211,7 @@ exports.updateReview = async(req,res) => {
         if(imageUpload) review.reviewImage = imageUpload.secure_url
         await review.save();
 
-        return res.status(500).json({
+        return res.status(200).json({
             success : true,
             message : "REVIEW UPDATED",
             data : review,
@@ -244,7 +244,7 @@ exports.deleteReview = async(req,res) => {
         await Review.findByIdAndDelete(reviewId)
         await User.findByIdAndUpdate(userId, {$pull : {reviews : rId}})
 
-        return res.status(500).json({
+        return res.status(200).json({
             success : true,
             message : "REVIEW DELETED",
             data : reviewId

@@ -35,7 +35,7 @@ This MERN Stack project is a dynamic and interactive web application featuring s
 
 ## Tech Stack
 
-- **Frontend Framework:** MERN STACK
+- **Framework Used:** MERN STACK
 - **Authentication:** MONGODB and JWT authentication
 - **Hosting:** [Vercel](https://ig-tech-so-assignment.vercel.app)
 - **POSTMAN:** [POSTMAN](https://www.postman.com/therohitgupta/workspace/igtechso/collection/22682116-ccee1cd5-5c62-46b1-8a39-fb9bfb38d66c?action=share&creator=22682116)
@@ -43,25 +43,12 @@ This MERN Stack project is a dynamic and interactive web application featuring s
 ## Setup
 
 1. Clone the repository: `git clone https://github.com/theRohitGupta/igTechSo-Assignment.git`
-2. Install dependencies: `npm install`
+2. Install dependencies: `npm install` in both /server and root directory
 3. Configure MongoDb: Follow the [MongoDb setup guide](https://www.mongodb.com/developer/) and update your MongoDB configuration in the project.
-4. .env is required in both /server and /src 
-/server -> 
-#JWT SECRETS
-JWT_SECRET = "",
-
-#CLOUDINARY CONFIG
-CLOUD_NAME = 
-API_KEY = 
-API_SECRET = 
-FOLDER_NAME = 
-
-#MONGODB CONFIG
-PORT = 4000
-MONGODB_URL = ""
-
-/src -> 
-REACT_APP_BASE_URL = "https://igtechso-assignment.onrender.com/review"
+4. Configure Cloudinary: Cloudinary is used as a data store to upload review images which then returns a URL which is stored in MongoDB
+YOU CAN CREATE A FREE CLOUDINARY ACCOUNT -> Follow the [Cloudinary setup guide](https://www.mongodb.com/developer/) and update your MongoDB configuration in the project.
+4. Configure .env Files Accordingly... Already given Reference files
+/src -> REACT_APP_BASE_URL = "https://igtechso-assignment.onrender.com/review"
 
 5. Visit [http://localhost:3000](http://localhost:3000) to view the app in your browser.
 

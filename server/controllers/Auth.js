@@ -8,14 +8,14 @@ exports.signUp = async(req, res) => {
         const { email, password, confirmPassword } = req.body
         
         if(!email || !password || !confirmPassword){
-            return res.status(403).json({
+            return res.status(406).json({
                 success : false,
                 message : "ALL FIELDS ARE REQUIRED"
             })
         }
 
         if(password !== confirmPassword){
-            return res.status(400).json({
+            return res.status(406).json({
                 success : false,
                 message : "PASSWORD AND CONFIRM PASSWORD DO NOT MATCH"
             })
@@ -23,7 +23,7 @@ exports.signUp = async(req, res) => {
 
         const existingUser = await User.findOne({email})
         if(existingUser){
-            return res.status(400).json({
+            return res.status(200).json({
                 success : false,
                 message : "USER ALREADY EXISTS.... PLEASE LOGIN"
             })
@@ -56,7 +56,7 @@ exports.login = async(req,res) => {
         const {email, password} = req.body
 
         if(!email || !password){
-            return res.status(403).json({
+            return res.status(406).json({
                 succes : false,
                 message : "ALL FIELDS ARE REQUIRED"
             })
