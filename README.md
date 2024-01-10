@@ -1,7 +1,6 @@
 # ASSIGNMENT igTechSo BY ROHIT GUPTA
 
-# Project Name
-LandGuru
+# LandGuru
 
 ## Overview
 
@@ -39,14 +38,32 @@ This MERN Stack project is a dynamic and interactive web application featuring s
 - **Frontend Framework:** MERN STACK
 - **Authentication:** MONGODB and JWT authentication
 - **Hosting:** [Vercel](https://ig-tech-so-assignment.vercel.app)
-- ** POSTMAN:** [POSTMAN](https://www.postman.com/therohitgupta/workspace/igtechso/collection/22682116-ccee1cd5-5c62-46b1-8a39-fb9bfb38d66c?action=share&creator=22682116)
+- **POSTMAN:** [POSTMAN](https://www.postman.com/therohitgupta/workspace/igtechso/collection/22682116-ccee1cd5-5c62-46b1-8a39-fb9bfb38d66c?action=share&creator=22682116)
 
 ## Setup
 
 1. Clone the repository: `git clone https://github.com/theRohitGupta/igTechSo-Assignment.git`
 2. Install dependencies: `npm install`
 3. Configure MongoDb: Follow the [MongoDb setup guide](https://www.mongodb.com/developer/) and update your MongoDB configuration in the project.
-4. Visit [http://localhost:3000](http://localhost:3000) to view the app in your browser.
+4. .env is required in both /server and /src 
+/server -> 
+#JWT SECRETS
+JWT_SECRET = "",
+
+#CLOUDINARY CONFIG
+CLOUD_NAME = 
+API_KEY = 
+API_SECRET = 
+FOLDER_NAME = 
+
+#MONGODB CONFIG
+PORT = 4000
+MONGODB_URL = ""
+
+/src -> 
+REACT_APP_BASE_URL = "https://igtechso-assignment.onrender.com/review"
+
+5. Visit [http://localhost:3000](http://localhost:3000) to view the app in your browser.
 
 ## Running the Application
 
@@ -54,8 +71,7 @@ This MERN Stack project is a dynamic and interactive web application featuring s
 npm run dev
 
 ## Demo
-**Deployed on:**
-- [Vercel](https://ig-tech-so-assignment.vercel.app)
+**Deployed on:** - [Vercel](https://ig-tech-so-assignment.vercel.app)
 
 ## Contact Information
 
